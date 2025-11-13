@@ -24,51 +24,43 @@
       font-size: 2.5rem;
     }
 
-    .skills-section {
-      max-width: 800px;
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 900px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
 
-    .skill {
-      margin-bottom: 1.5rem;
-      display: flex;
-      flex-direction: column;
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      min-width: 220px;
+      text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: default;
     }
 
-    .skill-name {
-      font-weight: bold;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #8b5e3c;
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
-      color: #8b5e3c;
     }
 
-    .skill-bar {
-      background-color: #ddd;
-      border-radius: 10px;
-      height: 30px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    .skill-level {
-      height: 100%;
-      background-color: #8b5e3c;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      padding-left: 0.5rem;
-      animation: fillBar 1.5s forwards;
-    }
-
-    @keyframes fillBar {
-      from { width: 0; }
-      to { width: var(--level-width); }
+    .card ul {
+      padding-left: 1.2rem;
+      margin: 0;
+      color: #555;
     }
 
     .back-btn {
@@ -92,55 +84,53 @@
   <h1>Networking Skills</h1>
 </header>
 
-<section class="skills-section">
+<section class="cards-container">
 
-  <div class="skill">
-    <div class="skill-name">Protocols Knowledge</div>
-    <div class="skill-bar">
-      <div class="skill-level" style="--level-width:90%;">TCP/IP, UDP, HTTP, HTTPS, DHCP</div>
-    </div>
+  <div class="card">
+    <h3>Protocols</h3>
+    <ul>
+      <li>TCP/IP, UDP</li>
+      <li>HTTP, HTTPS</li>
+      <li>DHCP</li>
+    </ul>
   </div>
 
-  <div class="skill">
-    <div class="skill-name">File Transfer</div>
-    <div class="skill-bar">
-      <div class="skill-level" style="--level-width:85%;">FTP</div>
-    </div>
+  <div class="card">
+    <h3>File Transfer</h3>
+    <ul>
+      <li>FTP</li>
+    </ul>
   </div>
 
-  <div class="skill">
-    <div class="skill-name">Email Services</div>
-    <div class="skill-bar">
-      <div class="skill-level" style="--level-width:85%;">SMTP, POP, IMAP</div>
-    </div>
+  <div class="card">
+    <h3>Email</h3>
+    <ul>
+      <li>SMTP, POP, IMAP</li>
+    </ul>
   </div>
 
-  <div class="skill">
-    <div class="skill-name">DNS Management</div>
-    <div class="skill-bar">
-      <div class="skill-level" style="--level-width:80%;">DNS</div>
-    </div>
+  <div class="card">
+    <h3>DNS</h3>
+    <ul>
+      <li>Domain Name System</li>
+    </ul>
   </div>
 
-  <div class="skill">
-    <div class="skill-name">VPN & VLAN</div>
-    <div class="skill-bar">
-      <div class="skill-level" style="--level-width:80%;">VPN, VLAN</div>
-    </div>
+  <div class="card">
+    <h3>VPN & VLAN</h3>
+    <ul>
+      <li>Virtual Private Networks</li>
+      <li>Virtual LANs</li>
+    </ul>
   </div>
 
-  <div class="skill">
-    <div class="skill-name">Network Security & Firewall</div>
-    <div class="skill-bar">
-      <div class="skill-level" style="--level-width:75%;">Security principles, Firewall</div>
-    </div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-name">Cryptography Basics</div>
-    <div class="skill-bar">
-      <div class="skill-level" style="--level-width:70%;">Encryption principles</div>
-    </div>
+  <div class="card">
+    <h3>Security</h3>
+    <ul>
+      <li>Network Security Principles</li>
+      <li>Firewalls</li>
+      <li>Cryptography Basics</li>
+    </ul>
   </div>
 
   <a href="index.html" class="back-btn">Back to Home</a>
@@ -149,4 +139,3 @@
 
 </body>
 </html>
-
