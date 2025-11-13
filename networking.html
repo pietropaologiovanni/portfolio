@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Networking Skills - Giovanni Pietropaolo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f3ef;
+      color: #333;
+    }
+
+    header {
+      background-color: #e0dcd3;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #8b5e3c;
+      font-size: 2.5rem;
+    }
+
+    .skills-section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .skill {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #8b5e3c;
+    }
+
+    .skill-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      height: 30px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .skill-level {
+      height: 100%;
+      background-color: #8b5e3c;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      padding-left: 0.5rem;
+      animation: fillBar 1.5s forwards;
+    }
+
+    @keyframes fillBar {
+      from { width: 0; }
+      to { width: var(--level-width); }
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 2rem auto;
+      padding: 0.8rem 1.5rem;
+      background-color: #8b5e3c;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .back-btn:hover { background-color: #6e482d; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Networking Skills</h1>
+</header>
+
+<section class="skills-section">
+
+  <div class="skill">
+    <div class="skill-name">Protocols Knowledge</div>
+    <div class="skill-bar">
+      <div class="skill-level" style="--level-width:90%;">TCP/IP, UDP, HTTP, HTTPS, DHCP</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">File Transfer</div>
+    <div class="skill-bar">
+      <div class="skill-level" style="--level-width:85%;">FTP</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">Email Services</div>
+    <div class="skill-bar">
+      <div class="skill-level" style="--level-width:85%;">SMTP, POP, IMAP</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">DNS Management</div>
+    <div class="skill-bar">
+      <div class="skill-level" style="--level-width:80%;">DNS</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">VPN & VLAN</div>
+    <div class="skill-bar">
+      <div class="skill-level" style="--level-width:80%;">VPN, VLAN</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">Network Security & Firewall</div>
+    <div class="skill-bar">
+      <div class="skill-level" style="--level-width:75%;">Security principles, Firewall</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">Cryptography Basics</div>
+    <div class="skill-bar">
+      <div class="skill-level" style="--level-width:70%;">Encryption principles</div>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-btn">Back to Home</a>
+
+</section>
+
+</body>
+</html>
 
