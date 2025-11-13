@@ -12,39 +12,12 @@
       color: #333;
     }
 
-    a {
-      text-decoration: none;
-      color: #8b5e3c;
-    }
+    header { background-color: #e0dcd3; padding: 2rem; text-align: center; }
+    header h1 { margin: 0; color: #8b5e3c; font-size: 2.5rem; }
 
-    header {
-      background-color: #e0dcd3;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #8b5e3c;
-      font-size: 2.5rem;
-    }
-
-    .skills-section {
-      max-width: 700px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .skill {
-      margin-bottom: 2rem;
-    }
-
-    .skill-name {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      display: flex;
-      justify-content: space-between;
-    }
+    .skills-section { max-width: 700px; margin: 3rem auto; padding: 0 1rem; }
+    .skill { margin-bottom: 2rem; }
+    .skill-name { font-weight: bold; margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
 
     .skill-bar {
       background-color: #ddd;
@@ -59,12 +32,18 @@
       width: 0;
       background-color: #8b5e3c;
       border-radius: 10px;
-      transition: width 1.5s ease-in-out;
-      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
       padding-right: 0.5rem;
       color: white;
       font-weight: bold;
-      line-height: 20px;
+      animation: fillBar 1.5s forwards;
+    }
+
+    @keyframes fillBar {
+      from { width: 0; }
+      to { width: var(--level-width); }
     }
 
     .back-btn {
@@ -78,9 +57,7 @@
       transition: background-color 0.3s;
     }
 
-    .back-btn:hover {
-      background-color: #6e482d;
-    }
+    .back-btn:hover { background-color: #6e482d; }
   </style>
 </head>
 <body>
@@ -96,7 +73,7 @@
         <span>Advanced</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-level" data-level="95%"></div>
+        <div class="skill-level" style="--level-width:80%;">Advanced</div>
       </div>
     </div>
 
@@ -106,7 +83,7 @@
         <span>Advanced</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-level" data-level="90%"></div>
+        <div class="skill-level" style="--level-width:80%;">Advanced</div>
       </div>
     </div>
 
@@ -116,7 +93,7 @@
         <span>Advanced</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-level" data-level="90%"></div>
+        <div class="skill-level" style="--level-width:80%;">Advanced</div>
       </div>
     </div>
 
@@ -126,7 +103,7 @@
         <span>Elementary</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-level" data-level="30%"></div>
+        <div class="skill-level" style="--level-width:20%;">Elementary</div>
       </div>
     </div>
 
@@ -136,7 +113,7 @@
         <span>Elementary</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-level" data-level="35%"></div>
+        <div class="skill-level" style="--level-width:20%;">Elementary</div>
       </div>
     </div>
 
@@ -146,7 +123,7 @@
         <span>Intermediate</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-level" data-level="60%"></div>
+        <div class="skill-level" style="--level-width:50%;">Intermediate</div>
       </div>
     </div>
 
@@ -156,7 +133,7 @@
         <span>Advanced</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-level" data-level="90%"></div>
+        <div class="skill-level" style="--level-width:80%;">Advanced</div>
       </div>
     </div>
 
@@ -166,24 +143,12 @@
         <span>Upper-Intermediate</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-level" data-level="75%"></div>
+        <div class="skill-level" style="--level-width:65%;">Upper-Intermediate</div>
       </div>
     </div>
+
+    <a href="index.html" class="back-btn">Back to Home</a>
   </section>
-
-  <a href="index.html" class="back-btn">← Back to Home</a>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const levels = document.querySelectorAll('.skill-level');
-      levels.forEach(bar => {
-        const width = bar.getAttribute('data-level');
-        setTimeout(() => {
-          bar.style.width = width;
-        }, 100);
-      });
-    });
-  </script>
 
 </body>
 </html>
