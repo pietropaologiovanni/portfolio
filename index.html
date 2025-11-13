@@ -5,50 +5,58 @@
     <p>IT Junior | Developer Junior</p>
     <div class="cta-buttons">
       <a href="#skills" class="btn">View My Skills</a>
-      <a href="#projects" class="btn">View Projects</a>
       <a href="#contact" class="btn btn-outline">Contact Me</a>
     </div>
   </div>
 
   <div class="overview-cards">
     <div class="card">💻 Programming & Web</div>
-    <div class="card">🌐 Networking</div>
+    <div class="card">🔒 Networking</div>
     <div class="card">🎓 Education & Certifications</div>
     <div class="card">📁 Projects</div>
+  </div>
+
+  <div class="about-me">
+    <h2>About Me</h2>
+    <p>
+      I’m <strong>Giovanni Pietropaolo</strong>, a passionate IT graduate from ITI Enrico Medi, San Giorgio a Cremano, where I completed my diploma with top marks (100/100). Since I was young, I have been fascinated by technology and problem-solving, which led me to explore programming, network systems, and IT in general.
+    </p>
+    <p>
+      I am a <strong>creative and precise professional</strong>, driven by curiosity and continuous learning. My goal is to contribute effectively to projects in a dynamic and innovative environment, combining technical knowledge with a proactive approach and a strong sense of responsibility.
+    </p>
   </div>
 </section>
 
 <style>
-/* HOME SECTION */
 .home-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   text-align: center;
-  background: linear-gradient(135deg, #fdf6e3, #f5f0e1); /* beige gradient */
-  padding: 3rem 1rem;
-  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #fdf6e3, #f0e5d8);
+  padding: 2rem;
+  gap: 3rem;
 }
 
 .intro h1 {
   font-size: 3rem;
-  color: #b08b4f; /* darker beige / brown accent */
+  color: #b67c47;
   opacity: 0;
   animation: fadeIn 1.2s forwards;
 }
 
 .intro h3 {
   font-size: 1.5rem;
-  color: #5c5c5c; /* muted gray */
+  color: #555;
   margin: 1rem 0;
   min-height: 2rem;
 }
 
 .intro p {
   font-size: 1.2rem;
-  color: #6f6f6f;
+  color: #7f6a58;
   opacity: 0;
   animation: fadeIn 1.5s forwards 0.5s;
 }
@@ -61,55 +69,70 @@
   display: inline-block;
   padding: 0.8rem 1.5rem;
   margin: 0 0.5rem;
-  background-color: #b08b4f; /* beige accent */
+  background-color: #b67c47;
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: 500;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: #8c673a; /* darker accent */
-  transform: translateY(-2px);
+  background-color: #9e6430;
 }
 
 .btn-outline {
   background-color: transparent;
-  color: #b08b4f;
-  border: 2px solid #b08b4f;
+  color: #b67c47;
+  border: 2px solid #b67c47;
 }
 
 .btn-outline:hover {
-  background-color: #b08b4f;
+  background-color: #b67c47;
   color: white;
 }
 
 .overview-cards {
   display: flex;
   gap: 1rem;
-  margin-top: 3rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .card {
-  background-color: #fff8f0; /* very light beige */
+  background-color: white;
   padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  min-width: 180px;
-  font-weight: 500;
-  color: #5c5c5c;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-width: 200px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Fade-in animation */
+.about-me {
+  max-width: 700px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1.5s forwards 1s;
+}
+
+.about-me h2 {
+  color: #b67c47;
+  margin-bottom: 1rem;
+}
+
+.about-me p {
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 @keyframes fadeIn {
   to { opacity: 1; }
 }
@@ -117,10 +140,7 @@
 
 <script>
 // Typing animation for the subtitle
-const text = [
-  "Passionate about programming and networking.",
-  "Always learning, always creating."
-];
+const text = ["Passionate about programming and networking.", "Looking for my first IT opportunity."];
 let index = 0, charIndex = 0;
 const typingElement = document.getElementById("typing");
 
